@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MasterChef</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Find a recipie or ingridient">
+            </div>
+            <button class="sign-in" onclick="openPopup()">Sign In</button>
+            
+        </nav>
+    
+        <div class="popup" id="authPopup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>Sign In</h2>
+                <form id="loginForm" onsubmit="return handleLogin(event)">
+                    <input type="text" placeholder="Email or Mobile" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Sign In</button>
+                </form>
+                <hr>
+                <h4>Create New Account</h4>
+                <button class="create-account" onclick="redirectToSignup()">Create Account</button>
+            </div>
+        </div>
+        <!-- <h1>Delicious Recipes</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    
+    <main>
+        <div class="container" id="featured">
+            <h2>Featured Recipe</h2>
+            <div class="recipe">
+                <img src="images.jpeg" alt="Creamy Garlic Pasta">
+                <h3>Creamy Garlic Pasta</h3>
+                <p>A rich and creamy pasta dish with garlic, herbs, and parmesan cheese. Perfect for a quick dinner!</p>
+                <a href="./garlic.html" class="view-recipe">View Recipe</a>
+            </div>
+        </div>
+
+        <div class="container" id="quick-easy">
+            <h2>Quick & Easy Recipes</h2>
+            <div class="recipe">
+                <img src="download (3).jpeg" alt="15-Minute Veggie Stir-Fry">
+                <h3>15-Minute Veggie Stir-Fry</h3>
+                <p>A colorful and delicious stir-fry that’s ready in just 15 minutes.</p>
+                <a href="./vegie.html" class="view-recipe">View Recipe</a>
+            </div>
+        </div>
+
+        <div class="container" id="healthy">
+            <h2>Healthy Options</h2>
+            <div class="recipe">
+                <img src="download (2).jpeg" alt="Quinoa Salad with Avocado">
+                <h3>Quinoa Salad with Avocado</h3>
+                <p>A nutritious salad packed with quinoa, fresh vegetables, and a zesty dressing.</p>
+                <a href="./avocado.html" class="view-recipe">View Recipe</a>
+            </div>
+        </div>
+
+        <div class="container" id="seasonal">
+            <h2>Seasonal Favorites</h2>
+            <div class="recipe">
+                <img src="download (1).jpeg" alt="download(1).jpeg">
+                <h3>Pumpkin Spice Muffins</h3>
+                <p>Delicious muffins filled with warm spices, perfect for autumn!</p>
+                <a href="./seasonal.html" class="view-recipe">View Recipe</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <footer class="footbar">
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2>MasterChef</h2>
+                    <p>"At MasterChef, we believe that cooking is an art and every dish is a canvas waiting to be painted with flavors."</p>
+                    <div class="socials">
+                        
+                        <a href="https://www.instagram.com/your_instagram_id" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contact Information</h2>
+                    <!-- <p><strong>Phone:</strong> <a href="tel:9649330127">9649330127</a></p> -->
+                    <p><strong>Address:</strong> 123 MasterChef Avenue, Green City, Country</p>
+                    <p><strong>Contact no:</strong> 9555049356</p>
+                    <p><strong>Email:</strong> Masterchef2961@chef.ac.in</p>
+                </div>
+                <div class="footer-section location">
+                    <h2>Location</h2>
+                    <p>Visit us at our headquarters:</p>
+                    <p>123 Masterchef Avenue, Green City, Country</p>
+                 <!-- <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345098323!2d144.9537353153156!3d-37.81627997975143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0c7a7d%3A0x5045675218ceed60!2sYour%20Business%20Location!5e0!3m2!1sen!2sus!4v1619533908268!5m2!1sen!2sus"
+                            width="300"
+                            height="200"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div> -->
+                </div>
+                
+            </div>
+            <div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345098323!2d144.9537353153156!3d-37.81627997975143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0c7a7d%3A0x5045675218ceed60!2sYour%20Business%20Location!5e0!3m2!1sen!2sus!4v1619533908268!5m2!1sen!2sus"
+                        width="1263.33"
+                        height="300"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+            <!-- <p>&copy; 2024 Scrap Uncle</p> -->
+        </footer>
+
+    </footer>
+
+    <!-- <footer>
+        <p>© 2024 Delicious Recipes. All rights reserved.</p>
+    </footer>
+     -->
+
+    <script src="script.js"></script>
+</body>
+</html>
